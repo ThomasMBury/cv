@@ -1,0 +1,807 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% A clean template for an academic CV
+%
+% Uses tabularx to create two column entries (date and job/edu/citation).
+% Defines commands to make adding entries simpler.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt, a4paper]{article}
+
+% Full Unicode support for non-ASCII characters
+\usepackage[utf8]{inputenc}
+
+% Useful aliases
+\newcommand{\UERJ}{Universidade do Estado do Rio de Janeiro}
+\newcommand{\UHM}{University of Hawai`i at M\={a}noa}
+\newcommand{\SOEST}{School of Ocean and Earth Science and Technology}
+\newcommand{\UHEARTH}{Department of Earth Sciences}
+\newcommand{\LIVEARTH}{Department of Earth, Ocean and Ecological Sciences}
+\newcommand{\LIVENV}{School of Environmental Sciences}
+\newcommand{\LIV}{University of Liverpool}
+\newcommand{\DP}{Department of Physiology}
+\newcommand{\FM}{Faculty of Medicine}
+\newcommand{\MU}{McGill University}
+
+% Identifying information
+\newcommand{\Title}{Curriculum Vit\ae}
+\newcommand{\FirstName}{Thomas M.}
+\newcommand{\LastName}{Bury}
+\newcommand{\Initials}{T. M}
+\newcommand{\MyName}{\FirstName\ \LastName}
+\newcommand{\Me}{\textbf{T. M. Bury}}  % For citations
+\newcommand{\Email}{thomas.bury@mcgill.ca}
+\newcommand{\PersonalWebsite}{thomas-bury.research.mcgill.ca}
+\newcommand{\LabWebsite}{compgeolab.org}
+\newcommand{\ORCID}{0000-0003-1595-9444}
+\newcommand{\Affiliation}{\DP \\ \FM \\ \MU}
+\newcommand{\Address}{
+  Montréal, QC\\ H3A 0G4 Canada
+}
+
+% Names for citing coauthors
+\newcommand{\Val}{Barbosa, VCF}
+\newcommand{\Bi}{Oliveira Jr, VC}
+\newcommand{\Paul}{Wessel, P}
+\newcommand{\Joaquim}{Luis, J}
+\newcommand{\Remko}{Scharroo, R}
+\newcommand{\Florian}{Wobbe, F}
+\newcommand{\Walter}{Smith, WHF}
+\newcommand{\Dongdong}{Tian, D}
+\newcommand{\Bridget}{Smith-Konter, B}
+\newcommand{\Eric}{Xu, X}
+\newcommand{\David}{Sandwell, DT}
+\newcommand{\Carla}{Braitenberg, C}
+\newcommand{\Naomi}{Ussami, N}
+\newcommand{\Manoel}{D'Agrella-Filho, MS}
+\newcommand{\JB}{Silva, JBC}
+\newcommand{\Dai}{Sales, DP}
+\newcommand{\Figura}{Melo, FF}
+\newcommand{\Dio}{Carlos, DU}
+\newcommand{\BragaVale}{Braga, MA}
+\newcommand{\YLi}{Li, Y}
+\newcommand{\Angeli}{Angeli, G}
+\newcommand{\Peres}{Peres, G}
+\newcommand{\Everton}{Bomfim, EP}
+\newcommand{\Eder}{Molina, E}
+\newcommand{\Gomes}{Gomes, AAS}
+\newcommand{\Santiago}{Soler, SR}
+\newcommand{\Agustina}{Pesce, A}
+\newcommand{\Gimenez}{Gimenez, ME}
+\newcommand{\Kristoffer}{Hallam, KAT}
+\newcommand{\Guangdong}{Zhao, G}
+\newcommand{\Bo}{Chen, B}
+\newcommand{\JLiu}{Liu, J}
+\newcommand{\LChen}{Chen, L}
+\newcommand{\RGuo}{Guo, R}
+\newcommand{\MKaban}{Kaban, MK}
+\newcommand{\Lindsey}{Heagy, LJ}
+\newcommand{\Lion}{Krischer, L}
+\newcommand{\Rene}{Gassmoeller, R}
+\newcommand{\Bane}{Sullivan, CB}
+\newcommand{\Jens}{Klump, JF}
+\newcommand{\LBarba}{Barba, LA}
+\newcommand{\JBazan}{Bazan, J}
+\newcommand{\JBrown}{Brown, J}
+\newcommand{\RGuimera}{Guimera, RV}
+\newcommand{\MGymrek}{Gymrek, M}
+\newcommand{\AHanna}{Alex Hanna}
+\newcommand{\KHuff}{Huff, KD}
+\newcommand{\DKatz}{Katz, DS}
+\newcommand{\CMadan}{Madan, CR}
+\newcommand{\KMoerman}{Moerman, KM}
+\newcommand{\KNiemeyer}{Niemeyer, KE}
+\newcommand{\JPoulson}{Poulson, JL}
+\newcommand{\PPrins}{Prins, P}
+\newcommand{\KRam}{Ram, K}
+\newcommand{\ARokem}{Rokem, A}
+\newcommand{\Arfon}{Smith, AM}
+\newcommand{\GThiruvathukal}{Thiruvathukal, GK}
+\newcommand{\KThyng}{Thyng, KM}
+\newcommand{\BWilson}{Wilson, BE}
+\newcommand{\Yehudi}{Yehudi, Y}
+\newcommand{\Remi}{Rampin, R}
+\newcommand{\Hugo}{van Kemenade, H}
+\newcommand{\MattTurk}{Turk, M}
+\newcommand{\Shapero}{Shapero, D}
+\newcommand{\Anderson}{Banihirwe, A}
+\newcommand{\Leeman}{Leeman, J}
+\newcommand{\JEbbing}{Ebbing, J}
+\newcommand{\AGuy}{Guy, A}
+\newcommand{\JFarquharson}{Farquharson, J}
+\newcommand{\AKushnir}{Kushnir, A}
+\newcommand{\FWadsworth}{Wadsworth, F}
+\newcommand{\LPerozzi}{Perozzi, L}
+\newcommand{\MWieczorek}{Wieczorek, MA}
+
+
+% Template configuration
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Disable hyphenation
+\usepackage[none]{hyphenat}
+
+% Control the font size
+\usepackage{anyfontsize}
+
+% Icon fonts (requires using xelatex or luatex)
+\usepackage[fixed]{fontawesome5}
+\usepackage{academicons}
+
+% Template variables for styling
+\newcommand{\TablePad}{\vspace{-0.4cm}}
+\newcommand{\SoftwareTitle}[1]{{\bfseries #1}}
+\newcommand{\TableTitle}[1]{{\fontsize{12pt}{0}\selectfont \itshape #1}}
+
+% For fancy and multipage tables
+\usepackage{tabularx}
+\usepackage{ltablex}
+
+% Define a new environment to place all CV entries in a 2-column table.
+% Left column are the dates, right column the entries.
+\usepackage{environ}
+\NewEnviron{EntriesTable}{
+\TablePad
+\begin{tabularx}{\textwidth}{@{}p{0.12\textwidth}@{\hspace{0.02\textwidth}}p{0.86\textwidth}@{}}
+  \BODY
+\end{tabularx}
+}
+
+% Macros to add links and mark publications
+\newcommand{\DOI}[1]{doi:\href{https://doi.org/#1}{#1}}
+\newcommand{\DOILink}[1]{\href{https://doi.org/#1}{doi.org/#1}}
+\newcommand{\Preprint}[1]{\newline • Preprint: \faFilePdf\ \DOILink{#1}}
+\newcommand{\Youtube}[1]{\newline • Recording: \faYoutube\, \href{https://www.youtube.com/watch?v=#1}{youtube.com/watch?v=#1}}
+\newcommand{\RecordingDrive}[1]{\newline • Recording: \faGoogleDrive\, \href{https://drive.google.com/file/d/#1/view}{drive.google.com/file/d/#1}}
+\newcommand{\GitHub}[1]{\newline • Code: \faGithub\ \href{https://github.com/#1}{#1}}
+\newcommand{\Role}[1]{\newline • Role: #1}
+\newcommand{\Website}[1]{\newline • Website: \href{https://#1}{#1}}
+\newcommand{\Slides}[1]{\newline • Slides: \faTv\ \href{https://#1}{#1}}
+\newcommand{\SlidesDOI}[1]{\newline • Slides: \faTv\ \DOILink{#1}}
+\newcommand{\PosterDOI}[1]{\newline • Poster: \faImage\ \DOILink{#1}}
+\newcommand{\OA}{\aiOpenAccess\enspace}
+\newcommand{\Invited}{\newline • \textbf{Invited talk}}
+
+% Macros to set the year and duration on the left column
+\newcommand{\Duration}[2]{\fontsize{10pt}{0}\selectfont #1 -- #2}
+\newcommand{\Year}[1]{\fontsize{10pt}{0}\selectfont #1}
+\newcommand{\Ongoing}{present}
+%\newcommand{\Ongoing}{$\ast$}
+\newcommand{\Future}{future}
+\newcommand{\Review}{in review}
+\newcommand{\Accepted}{accepted}
+\newcommand{\Appointment}[4]{\textbf{#1} \newline #2 \newline #3 \newline #4}
+
+% Define command to insert month name and year as date
+\usepackage{datetime}
+\newdateformat{monthyear}{\monthname[\THEMONTH], \THEYEAR}
+
+% Set the page margins
+\usepackage[a4paper,margin=1.5cm,includehead,headsep=5mm]{geometry}
+
+% To get the total page numbers (\pageref{LastPage})
+\usepackage{lastpage}
+
+% No indentation
+\setlength\parindent{0cm}
+
+% Increase the line spacing
+\renewcommand{\baselinestretch}{1.1}
+% and the spacing between rows in tables
+\renewcommand{\arraystretch}{1.5}
+
+% Remove space between items in itemize and enumerate
+\usepackage{enumitem}
+\setlist{nosep}
+
+% Use custom colors
+\usepackage[usenames,dvipsnames]{xcolor}
+
+% Set fonts. Requires compilation with xelatex
+\usepackage{fontspec}  % required to make older xelatex compile with UTF8
+
+% Configure the font style for sections
+\usepackage{sectsty}
+\sectionfont{\vspace{0.5cm}\bfseries\fontsize{12pt}{0}\selectfont\uppercase}
+\subsectionfont{\vspace{0.2cm}\mdseries\fontsize{12pt}{0}\selectfont\uppercase}
+
+% Set the spacing for sections
+%\usepackage{titlesec}
+%\titlespacing{\section}{0pt}{0cm}{0.3cm}
+%\titlespacing{\subsection}{0pt}{0.3cm}{0.3cm}
+
+% Disable number of sections. Use this instead of "section*" so that the sections still
+% appear as PDF bookmarks. Otherwise, would have to add the table of contents entries
+% manually.
+\makeatletter
+\renewcommand{\@seccntformat}[1]{}
+\makeatother
+
+% Set fancy headers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\chead{
+  \fontsize{10pt}{12pt}\selectfont
+  \MyName
+  \hspace{0.2cm} -- \hspace{0.2cm}
+  \Title
+  \hspace{0.2cm} -- \hspace{0.2cm}
+  \monthyear\today
+}
+\rhead{\fontsize{10pt}{0}\selectfont \thepage/\pageref*{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
+
+% Metadata for the PDF output and control of hyperlinks
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{
+  pdftitle={\MyName\ - \Title},
+  pdfauthor={\MyName},
+  linkcolor=blue,
+  citecolor=blue,
+  filecolor=black,
+  urlcolor=MidnightBlue
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+% No header for the first page
+\thispagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% HEADER
+{\fontsize{22pt}{0}\selectfont\MyName}\\[-0.1cm]
+\rule{\textwidth}{0.2pt}
+\begin{minipage}[t]{0.595\textwidth}
+  \Affiliation
+  \\
+  \Address
+\end{minipage}
+\begin{minipage}[t]{0.405\textwidth}
+  \begin{flushright}
+  Last updated: \monthyear\today
+  \\
+    ORCID: \href{https://orcid.org/\ORCID}{\ORCID}
+    \\
+    Email: \href{mailto:\Email}{\Email}
+%    \\
+%    Research group: \href{https://www.\LabWebsite}{\LabWebsite}
+    \\
+    Website: \href{https://www.\PersonalWebsite}{\PersonalWebsite}
+    \\
+    Google Scholar: \href{https://scholar.google.ca/citations?user=qAp4KBYAAAAJ&hl=en&oi=ao}{scholar.google.ca}
+  \end{flushright}
+\end{minipage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Professional Appointments}
+
+\begin{EntriesTable}
+  \Duration{2020}{\Ongoing}  &
+  \Appointment{Postdoctoral Researcher}{\DP}{\FM}{\MU, Canada}
+  \\
+\end{EntriesTable}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Education}
+
+\begin{EntriesTable}
+  \Duration{2015}{2019}  &
+  \textbf{PhD, Applied Mathematics}, University of Waterloo, Canada
+  \newline
+  Thesis: Detecting and distinguishing transitions in ecological systems: model and data-driven approaches.
+  \newline
+  GPA: 96.4\%
+  \newline
+  Advisors: Dr. Chris Bauch, Dr. Madhur Anand
+  \\
+  \Duration{2014}{2015}  &
+  \textbf{MMATH, Mathematics}, University of Cambridge, UK
+  \newline
+  First class honours.\newline
+  Director of studies: Dr. Julia Gog, OBE
+  \\
+  \Duration{2011}{2014}  &
+  \textbf{BSc, Mathematics}, University of Cambridge, UK
+\end{EntriesTable}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Grants \& Fellowships}
+\section{Fellowships}
+
+\begin{EntriesTable}
+  \Duration{2021}{2022}  &
+  CAMBAM postdoctoral fellowship, Centre for Applied Mathematics in Bioscience and Medicine, McGill University (\$10,000)
+  \\
+  \Duration{2020}{2021}  &
+  CAMBAM postdoctoral fellowship, Centre for Applied Mathematics in Bioscience and Medicine, McGill University (\$7,000)
+\end{EntriesTable}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Awards \& Honors}
+
+\begin{EntriesTable}
+  \Year{2019}  &
+  Doctoral thesis award, University of Waterloo (\$5000)
+  \\
+  \Year{2019}  &
+  Combined travel grants, Waterloo Institute for Complexity and Innovation (\$2500)
+  \\
+  \Year{2017}  &
+  Research dissemination award, GRADTalks, University of Waterloo (\$500)
+  \\
+  \Year{2017}  &
+  Public speaking award, 2nd place at Fields Thesis Competition, Fields Institute, Toronto (\$300)
+  \\
+  \Year{2017}  &
+  Public speaking award, Finalist at 3MT competition, University of Waterloo (\$100)
+  \Youtube{UQ1nW9PNil8}
+  
+
+\end{EntriesTable}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Publications}
+
+%\subsection{Preprints}
+%
+%\begin{EntriesTable}
+%\Year{2019}  &
+%  \OA
+%  \LBarba, \JBazan, \JBrown, \RGuimera, \MGymrek, \AHanna, \Lindsey, \KHuff, \DKatz,
+%  \CMadan, \KMoerman, \KNiemeyer, \JPoulson, \PPrins, \KRam, \ARokem, \Arfon,
+%  \GThiruvathukal, \KThyng, \Me, \BWilson, \Yehudi.
+%  Giving software its due through community-driven review and publication.
+%  \emph{OSF Preprints}.
+%  \DOI{10.31219/osf.io/f4vx6}
+%\end{EntriesTable}
+
+
+\subsection{Papers}
+
+\begin{EntriesTable}
+\Year{2021}  &
+  \OA
+  \Me, R. Sujith, I. Pavithran, M. Scheffer, T. Lenton, M. Anand, and C. Bauch.
+  Deep learning for early warning signals of tipping points.
+  \emph{Proceedings of the National Academy of Sciences}.
+  \DOI{10.1073/pnas.2106140118}.
+  \GitHub{ThomasMBury/deep-early-warnings-pnas}
+  \\
+  ~ &
+  \OA
+  J. Menard, \Me, C. T. Bauch, and M. Anand.
+  When conflicts get heated, so does the planet: coupled social-climate dynamics under inequality
+  \emph{Proceedings of the Royal Society B}.
+  \DOI{10.1098/rspb.2021.1357}.
+  \GitHub{HerdOfBears/Sociodynamics}
+  \\
+\Year{2020}  &
+  \Me, C. Lerma, G. Bub, Z. Laksman, M. W. Deyell, L. Glass.
+  Long ECGs reveal rich and robust dynamical regimes in patients with frequent ectopy.
+  \emph{Chaos}.
+  \DOI{10.1063/5.0023987}.
+  \\
+  ~ &
+  \OA
+  \Me, C. T. Bauch, M. Anand.
+  Detecting and distinguishing tipping points using spectral early warning signals.
+  \emph{Journal of the Royal Society Interface}.
+  \DOI{10.1098/rsif.2020.0482}.
+  \GitHub{ThomasMBury/ewstools}
+  \\
+\Year{2019}  &
+  \OA
+  \Me, C. T. Bauch, M. Anand.
+  Charting pathways to climate change mitigation in a coupled socio-climate model.
+  \emph{PLoS computational biology}.
+  \DOI{10.1371/journal.pcbi.1007000}.
+  \GitHub{ThomasMBury/socio\_climate\_model}
+ \\
+  ~ &
+  \OA
+  D. A. Pananos, \Me, C. Wang, J. Schonfeld, S. P. Mohanty, B. Nyhan, M. Salathé, C. T. Bauch.
+  Critical dynamics in population vaccinating behavior.
+  \emph{Proceedings of the National Academy of Sciences}
+  \DOI{10.1073/pnas.1704093114}.
+\end{EntriesTable}
+
+%
+%\subsection{Conference proceedings (peer-reviewed)}
+
+%
+%\subsection{Open Datasets}
+
+
+
+\subsection{Open-source Software}
+
+\begin{EntriesTable}
+  \Duration{2019}{\Ongoing} &
+  \textbf{ewstools}
+  \newline
+  A Python package for computing early warning signals for bifurcations in time series data.
+  \DOI{10.5281/zenodo.3497512}
+  \Role{Creator, core developer}
+  \GitHub{ThomasMBury/ewstools}
+%  \Website{www.pygmt.org}
+\end{EntriesTable}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Presentations}
+
+\begin{EntriesTable}
+
+\Year{2021} &
+  \Me, R. Sujith, I. Pavithran, M. Scheffer, T. Lenton, M. Anand, and C. Bauch.
+  Deep learning for early warning signals of bifurcations.
+  \emph{Dynamics Days Europe},
+  Nice, France.
+  \SlidesDOI{10.6084/m9.figshare.16892431.v1}
+  \\
+  ~ &
+  \Me, C. Lerma, G. Bub, Z. Laksman, M. W. Deyell, L. Glass.
+  Long ECGs reveal rich and robust dynamical regimes in patients with frequent PVCs.
+  \emph{Society for Mathematical Biology Annual Meeting},
+  Virtual.
+  \SlidesDOI{10.6084/m9.figshare.16892593.v1}  
+  \\
+  ~ &
+  \Me, C. Lerma, G. Bub, Z. Laksman, M. W. Deyell, L. Glass.
+  Patterns of premature ventricular complexes in the human heart.
+  \emph{Department of Physiology Seminar Series, McGill University},
+  Montréal, Canada.
+  \Invited{}
+  \\
+\Year{2020} &
+  \Me, C. T. Bauch, M. Anand.
+  Detecting and distinguishing bifurcations from noisy time series data.
+  \emph{Applied Mathematics Seminar, Centre de Recherches Mathématiques},
+  Montréal, Canada.
+  \Invited{}
+  \Youtube{QGs2knhnXDM}
+  \SlidesDOI{10.6084/m9.figshare.16892632.v1}
+  \\
+  ~ &
+  \Me.
+  Bifurcations in the era of big data: Applications to cardiology and ecology.
+  \emph{Applied Mathematics Seminar Series, University of Ottawa},
+  Ottawa, Canada.
+  \Invited{}
+  \\
+  ~ &
+  \Me.
+  Bifurcations in the era of big data: Applications to cardiology and ecology.
+  \emph{Seminar Series in Quantitative Life Sciences and Medicine, University of McGill},
+  Montréal, Canada.
+  \Invited{}
+  \\
+  ~ & 
+  \Me, M. Anand, C. T. Bauch.
+  Fold or Flip? Distinguishing bifurcations in advance with spectral early warning signals.
+  \emph{Workshop on Critical Transitions in Complex Systems, Shanghai Institutes for Biological Sciences},
+  Shanghai, China.
+  \Invited{}
+  \RecordingDrive{1kp2G6q-Eu-H13JpVgUCcbezF\_rZzKjJ3}
+  \SlidesDOI{10.6084/m9.figshare.16892644.v1}
+  \\
+\Year{2019} &
+  \Me, C. T. Bauch, M. Anand.
+  Spectral early warning signals improve tipping point detection and description.
+  \emph{Society for Mathematical Biology Annual Meeting},
+  Montréal, Canada.
+  \PosterDOI{10.6084/m9.figshare.16892395.v2}
+  \\
+  ~ &
+  \Me, C. T. Bauch, M. Anand.
+  Spectral early warning signals improve tipping point detection and description.
+  \emph{Canadian Society of Applied and Industrial Mathematics, Annual Meeting 2019},
+  Whistler, Canada.
+  \SlidesDOI{10.6084/m9.figshare.16892662.v1}
+  \\
+\Year{2018} &
+  \Me, M. Anand, C. T. Bauch.
+  Early warning indicators of ecological tipping points. Do they predict critical transitions, or something else?
+  \emph{Ecological Society of America, Annual Meeting},
+  New Orleans, U.S.
+  \Invited{}
+  \\
+  ~ &
+  \Me, M. Anand, C. T. Bauch.
+  Characterizing impending transitions in complex systems.
+  \emph{Dynamics Days US 2018},
+  Denver, U.S.
+  \\  
+\Year{2017} &
+  \Me.
+  The mathematics of tipping points.
+  \emph{TEDx, University of Toronto},
+  Toronto, Canada.
+  \Invited{}
+  \Youtube{pfm7OqBVA6I}
+  \\
+  ~ &
+  \Me, M. Anand, C. T. Bauch.
+  Anticipating Critical Transitions in Socio-Ecological Systems
+  \emph{Applied Mathematics, Modeling and Computational Science, International Conference},
+  Waterloo, Canada.
+  \\
+  ~ &
+  \Me, M. Anand, C. T. Bauch.
+  Regime Shifts in Socio-Ecological Systems
+  \emph{Mathematical Models in Ecology and Evolution, Conference},
+  London, UK.
+  \\
+  ~ &
+  \Me, M. Anand, C. T. Bauch.
+  Regime Shifts in Socio-Ecological Systems
+  \emph{Waterloo Institute for Complexity and Innovation, Interdisciplinary Conference on Resilience in Complex Natural and Human Systems},
+  Waterloo, Canada. 
+  \\
+\end{EntriesTable}
+
+
+
+
+
+%\section{Media Coverage (selected)}
+%
+%My first-author publications have featured in national and international news outlets, including
+%\begin{EntriesTable}
+%  \Year{2021} &
+%  
+%
+%
+%\end{EntriesTable}
+%I have interviewed for various news outlets including the Scientific American, The Waterloo Region Record, and the Charlatan.
+%
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Teaching}
+
+\subsection{Courses}
+
+\begin{EntriesTable}
+  \Year{2021} &
+  \textbf{Instructor}, \textit{McGill University} \newline 
+  QLSC 600D1: Foundations of Quantitative Life Sciences, \newline
+  • 14 graduate students, 1 teaching assistant. \newline
+  • Co-instructed module on "Resetting and Entraining Biological Oscillators".\newline
+  • Designed project and class material
+  \\
+  \Year{2018} &
+  \textbf{Instructor}, \textit{University of Waterloo} \newline 
+  MATH 127: Calculus I for the Sciences, \newline
+  • 115 undergraduate students, 1 teaching assistant. \newline
+  • Designed and implemented 36 one-hour lectures with elements of `active learning'.\newline
+  • Strong student evaluations: mean rating >4.5/5 for each teaching aspect surveyed.
+  \\
+  \Year{2017-2018} &
+  \textbf{Teaching Assistant and Guest Lecturer}, \textit{University of Waterloo} \newline
+  AMATH 777 - Stochastic Processes in the Physical Sciences, \newline
+  • 15-20 graduate students, 1 teaching assistant. \newline
+  • Guest lectured, extended course notes, marked assignments.
+  \\
+  \Year{2016} &
+  \textbf{Head Teaching Assistant}, \textit{University of Waterloo}\newline
+   MATH 117 - Calculus I for Engineers, \newline
+  • 667 undergraduate students, 11 teaching assistants. \newline
+  • Designed weekly problem sheets and solutions for the entire course.\newline
+  • Ran interactive tutorial sessions, held office hours, marked and proctored exams.
+  \\
+  
+
+\end{EntriesTable}
+
+
+\subsection{Workshops}
+
+\begin{EntriesTable}
+%\Year{future}  &
+\Year{2020} &
+  Interactive data visualisation in Python\newline
+  \textit{CAMBAM-CRM, McGill University} (online) \newline
+  Designed and implemented 5-hour workshop on Zoom. 
+  Involved Jupyter notebooks with exercises and public datasets for participants. 
+  Received over 60 participants comprising students and faculty members across Canada.
+  \GitHub{ThomasMBury/workshop\_datavis\_python}
+  \\
+\Year{2018}  &
+  A Hands-on Introduction to Mathematical Modelling\newline
+  \textit{Waterloo Institute for Complexity and Innovation: Leveraging systems approaches to improve human and planetary health}\newline
+  Co-designed and implemented a 4-hour workshop that explores mathematical modelling with differential equations and agent-based models in the context of human and planetary health.
+\end{EntriesTable}
+
+
+\subsection{Credentials}
+
+\begin{EntriesTable}
+\Duration{2017}{2019} &
+  Certificate of University Teaching, \textit{University of Waterloo}\newline
+  An in-depth, selective, 2-year teaching course for PhD students. 
+  Includes multiple teaching observations, guided self-reflection and improvement, workshops and a pedagogical research project.
+  \\
+\Duration{2015}{2016}  &
+  Fundamentals of University Teaching, \textit{University of Waterloo}\newline
+  Includes weekly workshops on teaching fundamentals including active learning, equitable teaching, and effective delivery.
+\end{EntriesTable}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Student supervision and mentorship}
+
+\subsection{P\lowercase{h}D}
+
+\begin{EntriesTable}
+\Duration{2019}{\Ongoing}  &
+  Khady Diagne (co-advisor)\newline
+  McGill University\newline
+  Project: Spatio-temporal dynamics of pure parasystole in cardiac tissue
+\end{EntriesTable}
+
+
+
+
+\subsection{Undergraduate}
+
+\begin{EntriesTable}
+\Duration{2020}{2021}  &
+  Alix Vanpoperinghe (advisor)\newline
+  McGill University\newline
+  Project: Simulation of cardiac monolayers under optogenetic control
+  \GitHub{alixvanpo/opto-project}
+  \\
+\Duration{2020}{2021}  &
+  Glisant Plasa (co-advisor)\newline
+  McGill University\newline
+  Project: Reinforcement learning for discovery of reentry mechanisms in cardiac tissue
+\end{EntriesTable}
+
+
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Outreach}
+%
+%I maintain a blog about my research, geoscience, and programming at
+%\href{https://www.leouieda.com/blog}{leouieda.com/blog}
+%\\
+%
+%\begin{EntriesTable}
+%\Year{2018}  &
+%  Interviewed by the geoscience podcast \textit{Don't Panic Geocast}, episode 166
+%  \textit{``You are headed to a warm and sunny place''}:
+%  \href{http://www.dontpanicgeocast.com/?p=638}{dontpanicgeocast.com/?p=638}
+%  \\
+%\Year{2017}  &
+%  Volunteer for the \textit{Hour of Code} at Salt Lake Elementary School, Honolulu,
+%  USA.
+%  \\
+%\Year{2016}  &
+%  Interviewed by the geoscience podcast \textit{Undersampled Radio}, episode
+%  \textit{``Open Sourcery''}:
+%  \href{https://undersampledrad.io/home/2016/7/open-sourcery}{undersampledrad.io/home/2016/7/open-sourcery}
+%\end{EntriesTable}
+%
+%Geophysical tutorials for the SEG publication \textit{The Leading Edge}:
+%\\
+%
+%\begin{EntriesTable}
+%\Year{2017}  &
+%  \OA
+%  \Me.
+%  Step-by-step NMO correction,
+%  \emph{The Leading Edge},
+%  \DOI{10.1190/tle36020179.1}.
+%  \GitHub{pinga-lab/nmo-tutorial}
+%  \\
+%\Year{2014}  &
+%  \OA
+%  \Me, \Bi, \Val.
+%  Geophysical tutorial: Euler deconvolution of potential-field data,
+%  \emph{The Leading Edge},
+%  \DOI{10.1190/tle33040448.1}.
+%  \GitHub{pinga-lab/paper-tle-euler-tutorial}
+%\end{EntriesTable}
+%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Academic Service}
+%
+%\subsection{Editor}
+%
+%\begin{EntriesTable}
+%  \Duration{2019}{\Ongoing} & Topic editor for the \textit{Journal of Open Source Software}
+%\end{EntriesTable}
+%
+%\subsection{Community service}
+%
+%\begin{EntriesTable}
+%  \Duration{2019}{\Ongoing} & EarthArXiv Advisory Council
+%\end{EntriesTable}
+
+\subsection{Committees}
+
+\begin{EntriesTable}
+
+\Year{2021} &
+  CGSM evaluation committee member, \emph{McGill University}\newline
+  Served as an evaluator for the 2021-2022 Canada Graduate Scholarship-Master’s competition.
+  \\
+
+\Duration{2017}{2018} &
+  Senate Graduate and Research Council, \emph{University of Waterloo}\newline
+  Served as the math grad student representative for matters of academic quality and research activity within the university.
+  \\
+\end{EntriesTable}
+
+
+\subsection{Summer school}
+\begin{EntriesTable}
+  \Year{2021} & 
+  Summer School in Nonlinear Dynamics for the Life Sciences\newline
+  \emph{CAMBAM and NSERC-CREATE, McGill University}\newline
+  Served as technical lead for 2-week, online, international summer school with 50 participants and 24 instructors.
+  \\
+\end{EntriesTable}
+
+
+
+
+
+\subsection{Outreach}
+\begin{EntriesTable}
+  \Duration{2016}{2019} & 
+  Let’s Talk Science: National, charitable organisation for STEM outreach across schools in Canada. 
+  Volunteered on school visits to demonstrate physics concepts to children in Grades 4-6.
+  \\
+  \Year{2017} & 
+  Centennial Public School, Waterloo: Science fair judge for Grade 8 projects.
+\end{EntriesTable}
+
+
+
+%\subsection{Conference Convener}
+
+\subsection{Reviewer}
+
+\begin{itemize}
+  \item Physics Review X
+  \item Ecology Letters
+  \item Proceedings of the Royal Society A
+  \item Proceedings of the Royal Society B
+  \item Journal of the Royal Society Interface
+  \item Chaos 
+  \item Ecological Economics
+  \item Climatic Change
+  \item PLOS One
+
+\end{itemize}
+
+%\subsection{Affiliations}
+
+
+
+
+
+\section{Languages}
+
+\TablePad
+\begin{tabularx}{\textwidth}{@{}p{0.15\textwidth} p{0.85\textwidth}@{}}
+  English & Native
+  \\
+  French & TEFaQ Level C1 (proficiency) obtained in 2020.
+\end{tabularx}
+
+\end{document}
