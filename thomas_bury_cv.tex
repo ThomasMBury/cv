@@ -151,6 +151,7 @@
 \newcommand{\DOI}[1]{doi:\href{https://doi.org/#1}{#1}}
 \newcommand{\DOILink}[1]{\href{https://doi.org/#1}{doi.org/#1}}
 \newcommand{\Preprint}[1]{\newline • Preprint: \faFilePdf\ \DOILink{#1}}
+%\newcommand{\Media}[1]{\newline • Article: \faFilePdf\ }
 \newcommand{\Youtube}[1]{\newline • Recording: \faYoutube\, \href{https://www.youtube.com/watch?v=#1}{youtube.com/watch?v=#1}}
 \newcommand{\RecordingDrive}[1]{\newline • Recording: \faGoogleDrive\, \href{https://drive.google.com/file/d/#1/view}{drive.google.com/file/d/#1}}
 \newcommand{\GitHub}[1]{\newline • Code: \faGithub\ \href{https://github.com/#1}{#1}}
@@ -269,20 +270,12 @@
 %    \\
 %    Research group: \href{https://www.\LabWebsite}{\LabWebsite}
     \\
-    Website: \href{https://www.\PersonalWebsite}{\PersonalWebsite}
+    Website: \href{http://\PersonalWebsite}{\PersonalWebsite}
     \\
     Google Scholar: \href{https://scholar.google.ca/citations?user=qAp4KBYAAAAJ&hl=en&oi=ao}{scholar.google.ca}
   \end{flushright}
 \end{minipage}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Professional Appointments}
-
-\begin{EntriesTable}
-  \Duration{2020}{\Ongoing}  &
-  \Appointment{Postdoctoral Researcher}{\DP}{\FM}{\MU, Canada}
-  \\
-\end{EntriesTable}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -307,6 +300,20 @@
   \Duration{2011}{2014}  &
   \textbf{BSc, Mathematics}, University of Cambridge, UK
 \end{EntriesTable}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Professional Appointments}
+
+\begin{EntriesTable}
+  \Duration{2020}{\Ongoing}  &
+  \Appointment{Postdoctoral Researcher}{\DP}{\FM}{\MU, Canada}
+  \\
+\end{EntriesTable}
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -444,7 +451,7 @@
   \Me, R. Sujith, I. Pavithran, M. Scheffer, T. Lenton, M. Anand, and C. Bauch.
   Deep learning for early warning signals of bifurcations.
   \emph{Dynamics Days Europe},
-  Nice, France.
+  Virtual.
   \SlidesDOI{10.6084/m9.figshare.16892431.v1}
   \\
   ~ &
@@ -458,14 +465,14 @@
   \Me, C. Lerma, G. Bub, Z. Laksman, M. W. Deyell, L. Glass.
   Patterns of premature ventricular complexes in the human heart.
   \emph{Department of Physiology Seminar Series, McGill University},
-  Montréal, Canada.
+  Virtual.
   \Invited{}
   \\
 \Year{2020} &
   \Me, C. T. Bauch, M. Anand.
   Detecting and distinguishing bifurcations from noisy time series data.
   \emph{Applied Mathematics Seminar, Centre de Recherches Mathématiques},
-  Montréal, Canada.
+  Virtual.
   \Invited{}
   \Youtube{QGs2knhnXDM}
   \SlidesDOI{10.6084/m9.figshare.16892632.v1}
@@ -474,21 +481,21 @@
   \Me.
   Bifurcations in the era of big data: Applications to cardiology and ecology.
   \emph{Applied Mathematics Seminar Series, University of Ottawa},
-  Ottawa, Canada.
+  Virtual.
   \Invited{}
   \\
   ~ &
   \Me.
   Bifurcations in the era of big data: Applications to cardiology and ecology.
   \emph{Seminar Series in Quantitative Life Sciences and Medicine, University of McGill},
-  Montréal, Canada.
+  Virtual.
   \Invited{}
   \\
   ~ & 
   \Me, M. Anand, C. T. Bauch.
   Fold or Flip? Distinguishing bifurcations in advance with spectral early warning signals.
   \emph{Workshop on Critical Transitions in Complex Systems, Shanghai Institutes for Biological Sciences},
-  Shanghai, China.
+  Virtual.
   \Invited{}
   \RecordingDrive{1kp2G6q-Eu-H13JpVgUCcbezF\_rZzKjJ3}
   \SlidesDOI{10.6084/m9.figshare.16892644.v1}
@@ -552,76 +559,106 @@
 
 
 
-%\section{Media Coverage (selected)}
-%
-%My first-author publications have featured in national and international news outlets, including
-%\begin{EntriesTable}
-%  \Year{2021} &
-%  
-%
-%
-%\end{EntriesTable}
-%I have interviewed for various news outlets including the Scientific American, The Waterloo Region Record, and the Charlatan.
-%
+\section{Media Coverage (selected)}
+My research has been broadcast by over 40 different national and international news outlets.
 
+\begin{EntriesTable}
+ \Year{2021} &
+ The Independent\newline
+ • \faNewspaper[regular] \href{https://www.independent.co.uk/climate-change/news/climate-tipping-points-artificial-intelligence-b1925735.html}{independent.co.uk/climate-change/news/}
+\\
 
+ \Year{2021} &
+ The Daily Mail\newline
+ • \faNewspaper[regular] \href{https://www.dailymail.co.uk/sciencetech/article-10021757/Artificial-intelligence-reveal-climate-changes-tipping-points-act-like-early-warning-system.html}{dailymail.co.uk/sciencetech/}
+\\
+ \Year{2019} &
+ Canadian Broadcasting Corporation\newline
+ • \faNewspaper[regular] \href{https://www.cbc.ca/news/canada/kitchener-waterloo/guelph-environment-1.5170572}{cbc.ca/news/canada/}
+\\
+ \Year{2019} &
+ The Indian Express\newline
+ • \faNewspaper[regular] \href{https://indianexpress.com/article/lifestyle/life-style/social-interactions-can-help-slow-climate-change-study-5773829/}{indianexpress.com/article/}
+\\
+\end{EntriesTable}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Teaching}
 
-\subsection{Courses}
+\subsection{Graduate}
 
 \begin{EntriesTable}
   \Year{2021} &
   \textbf{Instructor}, \textit{McGill University} \newline 
-  QLSC 600D1: Foundations of Quantitative Life Sciences, \newline
-  • 14 graduate students, 1 teaching assistant. \newline
-  • Co-instructed module on "Resetting and Entraining Biological Oscillators".\newline
-  • Designed project and class material
+%  QLSC 600D1: 
+  Foundations of Quantitative Life Sciences, 
+  (Fall 2021)
+%  \newline
+%  • 14 graduate students, 1 teaching assistant. \newline
+%  • Co-instructed module on `Resetting and Entraining Biological Oscillators'.\newline
+%  • Designed project and class material
   \\
+
+  \Duration{2017}{2018} &
+  \textbf{Teaching Assistant and Guest Lecturer}, \textit{University of Waterloo} \newline
+%  AMATH 777 - 
+  Stochastic Processes in the Physical Sciences, 
+  (Winter 2017, Winter 2018)
+%  \newline
+%  • 15-20 graduate students, 1 teaching assistant. \newline
+%  • Guest lectured, extended course notes, marked assignments.
+  \\
+  
+  \Year{2017} &
+  \textbf{Teaching Assistant}, \textit{University of Waterloo} \newline
+  Mathematical Modeling with Differential Equations, 
+  (Fall 2017)
+  \\
+  \end{EntriesTable}
+
+
+
+\subsection{Undergraduate}
+
+\begin{EntriesTable}
   \Year{2018} &
   \textbf{Instructor}, \textit{University of Waterloo} \newline 
-  MATH 127: Calculus I for the Sciences, \newline
-  • 115 undergraduate students, 1 teaching assistant. \newline
-  • Designed and implemented 36 one-hour lectures with elements of `active learning'.\newline
-  • Strong student evaluations: mean rating >4.5/5 for each teaching aspect surveyed.
+%  MATH 127: 
+  Calculus I for the Sciences, 
+  (Fall 2018)
+%  \newline
+%  • 115 undergraduate students, 1 teaching assistant. \newline
+%  • Designed and implemented 36 one-hour lectures with elements of active learning.\newline
+%  • Strong student evaluations: mean rating >4.5/5 for each teaching aspect surveyed.
   \\
-  \Year{2017-2018} &
-  \textbf{Teaching Assistant and Guest Lecturer}, \textit{University of Waterloo} \newline
-  AMATH 777 - Stochastic Processes in the Physical Sciences, \newline
-  • 15-20 graduate students, 1 teaching assistant. \newline
-  • Guest lectured, extended course notes, marked assignments.
+  \Year{2018} &
+  \textbf{Teaching Assistant}, \textit{University of Waterloo}\newline
+  Partial Differential Equations I
+  (Winter 2018)
   \\
   \Year{2016} &
-  \textbf{Head Teaching Assistant}, \textit{University of Waterloo}\newline
-   MATH 117 - Calculus I for Engineers, \newline
-  • 667 undergraduate students, 11 teaching assistants. \newline
-  • Designed weekly problem sheets and solutions for the entire course.\newline
-  • Ran interactive tutorial sessions, held office hours, marked and proctored exams.
+  \textbf{Teaching Assistant}, \textit{University of Waterloo}\newline
+  Introduction to Differential Equations,
+  (Winter 2016)
+  \\
+  \Duration{2015}{2016} &
+  \textbf{Teaching Assistant}, \textit{University of Waterloo}\newline
+%   MATH 117 - 
+   Various calculus courses for math and engineering students\newline 
+   (Fall 2015, Summer 2016, Fall 2016)
+%   \newline
+%  • 667 undergraduate students, 11 teaching assistants. \newline
+%  • Designed weekly problem sheets and solutions for the entire course.\newline
+%  • Ran interactive tutorial sessions, held office hours, marked and proctored exams.
   \\
   
 
 \end{EntriesTable}
 
 
-\subsection{Workshops}
 
-\begin{EntriesTable}
-%\Year{future}  &
-\Year{2020} &
-  Interactive data visualisation in Python\newline
-  \textit{CAMBAM-CRM, McGill University} (online) \newline
-  Designed and implemented 5-hour workshop on Zoom. 
-  Involved Jupyter notebooks with exercises and public datasets for participants. 
-  Received over 60 participants comprising students and faculty members across Canada.
-  \GitHub{ThomasMBury/workshop\_datavis\_python}
-  \\
-\Year{2018}  &
-  A Hands-on Introduction to Mathematical Modelling\newline
-  \textit{Waterloo Institute for Complexity and Innovation: Leveraging systems approaches to improve human and planetary health}\newline
-  Co-designed and implemented a 4-hour workshop that explores mathematical modelling with differential equations and agent-based models in the context of human and planetary health.
-\end{EntriesTable}
+
 
 
 \subsection{Credentials}
@@ -640,7 +677,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Student supervision and mentorship}
+\section{Student supervision}
 
 \subsection{P\lowercase{h}D}
 
@@ -652,7 +689,14 @@
 \end{EntriesTable}
 
 
-
+%\subsection{Masters}
+%
+%\begin{EntriesTable}
+%\Duration{2019}{\Ongoing}  &
+%  Jyler Menard (mentor)\newline
+%  University of Waterloo\newline
+%\end{EntriesTable}
+%
 
 \subsection{Undergraduate}
 
@@ -747,13 +791,29 @@
 \end{EntriesTable}
 
 
-\subsection{Summer school}
+\subsection{Summer schools and workshops}
 \begin{EntriesTable}
   \Year{2021} & 
-  Summer School in Nonlinear Dynamics for the Life Sciences\newline
+  Summer School in Nonlinear Dynamics for the Life Sciences (online)\newline
   \emph{CAMBAM and NSERC-CREATE, McGill University}\newline
-  Served as technical lead for 2-week, online, international summer school with 50 participants and 24 instructors.
+  Technical lead for 2-week, international summer school with 50 participants and 24 instructors.
   \\
+
+\Year{2020} &
+  Interactive Data Visualisation in Python (online)\newline
+  \textit{CAMBAM-CRM, McGill University}\newline
+  Designed and implemented 5-hour workshop with
+%  Involved Jupyter notebooks with exercises and public datasets for participants. 
+  60 participants including students and faculty.
+  \GitHub{ThomasMBury/workshop\_datavis\_python}
+  \\
+\Year{2018}  &
+  A Hands-on Introduction to Mathematical Modelling\newline
+  \textit{Waterloo Institute for Complexity and Innovation: Leveraging systems approaches to improve human and planetary health}\newline
+  Co-designed and implemented 4-hour workshop.
+  %that explores mathematical modelling with differential equations and agent-based models in the context of human and planetary health.
+
+  
 \end{EntriesTable}
 
 
@@ -762,12 +822,26 @@
 
 \subsection{Outreach}
 \begin{EntriesTable}
-  \Duration{2016}{2019} & 
-  Let’s Talk Science: National, charitable organisation for STEM outreach across schools in Canada. 
-  Volunteered on school visits to demonstrate physics concepts to children in Grades 4-6.
+  \Year{2021} &
+  Interviews with media outlets including \emph{The Scientific American}, \emph{The Waterloo Region Record}, \emph{The McGill Tribune} and \emph{The Charlatan}.
   \\
+  \Duration{2016}{2018} & 
+  Workshop facilitator at primary school visits. \emph{Let's Talk Science}, Waterloo, Canada.
+  \\
+%  Let’s Talk Science: National, charitable organisation for STEM outreach across schools in Canada. 
+%  Volunteered on school visits to demonstrate physics concepts to children in Grades 4-6.
+%  \\
   \Year{2017} & 
-  Centennial Public School, Waterloo: Science fair judge for Grade 8 projects.
+  TEDx speaker. \emph{University of Toronto}, Toronto, Canada.
+  \\
+  ~ &
+  GRADTalks speaker and panelist \emph{University of Waterloo}, Waterloo, Canada.
+\\
+  ~ & 
+  Volunteer at Physics Lab Day for Grade 11-12. \emph{University of Waterloo}, Waterloo, Canada.
+\\
+  ~ & 
+  Science fair judge for Grade 8 projects. \emph{Centennial Public School}, Waterloo, Canada.
 \end{EntriesTable}
 
 
